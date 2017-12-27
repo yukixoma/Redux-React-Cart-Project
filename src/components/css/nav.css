@@ -1,0 +1,30 @@
+.navWrapper {
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand {
+    width: 120px;
+}
+
+.navbar-brand:hover {
+    background: white;
+    border-radius: 5px;
+}
+
+ul li {
+    font-size: 18px;
+    width: 120px;
+}
+
+ul li:hover{
+    background: white;
+    border-radius: 5px;
+}
+
+.bg-faded {
+    background-color: #e3f2fd;
+}
+
+.fa {
+    color:#0099cc;
+}
