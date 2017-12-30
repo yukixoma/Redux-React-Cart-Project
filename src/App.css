@@ -26,3 +26,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.fa-times:hover {
+  width: 30px;
+  border-radius: 5px;
+  background-color: red;
+}
+
+.card {
+  border-radius: 12px !important;
+}
+.card-header {
+  border-radius: 10px !important;
+  padding-bottom: 5px;
+}
+
+button {
+  border-radius: 10px !important;
+}
+
+select {
+  border-radius: 10px !important;
+}
