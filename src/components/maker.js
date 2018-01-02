@@ -67,20 +67,30 @@ class Maker extends Component {
     render() {
         return (
         <div>
-            <div className="text-left" style={{display: this.props.newTaskShow? "none": ""}}>
-                <button className="btn btn-outline-success mr-2" onClick = { this.onShow }>
+            <div style={{display: this.props.newTaskShow? "none": ""}}>
+                <button className="btn btn-outline-primary mr-2 new-task" onClick = { this.onShow }>
                     New task
                 </button>
             </div>
             <div>
                 <div className="card" 
-                    style={{display: this.props.newTaskShow? "": "none", 
-                    marginTop:10, marginBottom:10}} 
+                    style={{
+                        display: this.props.newTaskShow? "": "none", 
+                        marginTop:10, 
+                        marginBottom:10,
+                        borderColor: this.state.mod? "#FF8800": "#4285F4"
+                    }} 
                 >
-                    <div className="card-header" style={{color:"white",backgroundColor:"#0099CC"}}>
+                    <div 
+                        className="card-header" 
+                        style={{
+                            color:"white",
+                            backgroundColor: this.state.mod? "#FF8800": "#4285F4"
+                        }}
+                    >
                         <div className="row">
                             <div className="col-6" >
-                                <h3> New task </h3> 
+                                <h3> { this.state.mod? "Modify" : "New"} </h3> 
                             </div>
                             <div className="col-6 text-right" onClick = { this.onClose }>
                                 <span className="text-center">
@@ -106,10 +116,13 @@ class Maker extends Component {
                                     name="status"
                                     onChange = { this.onChangeHandle }>
                                         <option value="1"> Active </option>
-                                        <option value="0"> Hide </option>
+                                        <option value="0"> Inactive </option>
                                 </select>
                             </div>
-                            <button className="btn btn-outline-primary mr-2" type="submit">
+                            <button 
+                                className= {this.state.mod? "btn btn-outline-warning mr-2":"btn btn-outline-primary mr-2"} 
+                                type="submit"
+                            >
                                 Submit
                             </button>
                         </form>

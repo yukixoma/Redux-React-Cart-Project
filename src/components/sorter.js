@@ -49,16 +49,16 @@ class Finder extends Component {
 
     render() { 
         return (
-            <div className="text-right">
-                <select className="custom-select" 
+            <div className="text-right ">
+                <select className="custom-select sort" 
                     onChange = { this.onHandleChange }
                     value = { this.state.active }
                 >
-                    <option value="0"> Sort </option>
-                    <option value="1"> A-Z </option>
-                    <option value="2"> Z-A</option>
-                    <option value="3"> Active </option>
-                    <option value="4"> Hide </option>
+                        <option value="0"> Sort </option>
+                        <option value="1"> A-Z </option>
+                        <option value="2"> Z-A </option>
+                        <option value="3"> Active </option>
+                        <option value="4"> Hide </option>
                 </select>
             </div>
         );

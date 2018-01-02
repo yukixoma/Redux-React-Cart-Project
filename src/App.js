@@ -88,6 +88,10 @@ class App extends Component {
       this.refs.maker.onModifyHandle(taskName,status);
     }
   }
+
+  onStatusChange = (newTask) => {
+    this.onMake(newTask,"statusUpdate");
+  }
   
   onFind = (result) => {
     this.setState({result: result},()=>{this.refs.sorter.onSort(this.state.sortOpt)});
@@ -103,8 +107,8 @@ class App extends Component {
           </header>
         </div>
         <div className="container">
-          <div className="row" style={{marginTop:30}}>
-            <div className="col-lg-3" >
+          <div className="row" style={{marginTop:100}}>
+            <div className="col-lg-2" >
                 <div style={{display: this.state.newTaskShow? "none":"" }}>
                   <Maker
                     ref = "maker"
@@ -114,14 +118,16 @@ class App extends Component {
                   />
                 </div>
             </div>
-            <div className="col-lg-6">
-              <Finder 
-                ref = "finder"
-                task = { this.state.task }
-                onRecieveFinder = { this.onFind }
-              />
+            <div className="col-lg-8">
+              <div className="col-lg-10 offset-lg-2" >
+                <Finder 
+                  ref = "finder"
+                  task = { this.state.task }
+                  onRecieveFinder = { this.onFind }
+                />
+              </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-2">
               <Sorter
                 ref  = "sorter"
                 task = { this.state.task }
@@ -130,15 +136,16 @@ class App extends Component {
               />
             </div>
           </div>
-          <br/>
+          <div style={{marginTop:50}}>
+          </div>
           <div className="row">
             <div className="col-lg-4" style={{display: this.state.newTaskShow? "":"none" }}>
-                <Maker
-                  ref = "maker"
-                  newTaskShow = {this.state.newTaskShow}
-                  onRecieveMaker = { this.onMake }
-                  onRecieveNewTaskSwitch = { this.onNewTaskSwitch }
-                />
+              <Maker
+                ref = "maker"
+                newTaskShow = {this.state.newTaskShow}
+                onRecieveMaker = { this.onMake }
+                onRecieveNewTaskSwitch = { this.onNewTaskSwitch }
+            />
             </div>
             <div className={this.state.newTaskShow? "col-lg-8": "col-lg-12"}>
               <Display
@@ -146,6 +153,7 @@ class App extends Component {
                 task = { this.state.task }
                 result = { this.state.result }
                 onRecieveDisplay = { this.onModify }
+                onRecieveStatusChange = { this.onStatusChange }
               />
             </div>
           </div>

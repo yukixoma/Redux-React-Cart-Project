@@ -43,20 +43,21 @@ class Finder extends Component {
     render() {
         return (
             <div className="row">
-                <div className="col-lg-10">
+                <div className="col-lg-8">
                     <div className="input-group" >
                         <input 
                             type="text" 
-                            className="form-control" 
+                            className="form-control find-bar" 
                             value = { this.state.searchString }
-                            placeholder="Search for..."
+                            placeholder="&#xf002;"
                             onChange = { this.onInputSearch }
+                            style = {{fontFamily: "Arial, FontAwesome"}}
                         />
                     </div>
                 </div>
-                <div>
+                <div className="col-lg-4">
                     <select 
-                        className="custom-select"
+                        className="custom-select find-bar"
                         onChange = { this.onSearchOption } 
                     >
                         <option value="2"> All </option>
