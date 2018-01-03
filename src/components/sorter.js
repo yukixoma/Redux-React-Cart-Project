@@ -58,7 +58,7 @@ class Finder extends Component {
                         <option value="1"> A-Z </option>
                         <option value="2"> Z-A </option>
                         <option value="3"> Active </option>
-                        <option value="4"> Hide </option>
+                        <option value="4"> Inactive </option>
                 </select>
             </div>
         );
