@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
-   
-    
-    <link rel="stylesheet" href="%PUBLIC_URL%/lib/bootstrap.css">
+
+  
+
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" 
-      rel="stylesheet" 
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" 
-      crossorigin="anonymous"
-    >
-    
-    
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+      <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="%PUBLIC_URL%/lib/bootstrap.css">
+    <!-- Material Design Bootstrap -->
+    <link href="%PUBLIC_URL%/css/mdb.min.css" rel="stylesheet">
+    <!-- Customizer -->
+    <link rel="stylesheet" href="https://mdbootstrap.com/live/_MDB/css/customizer.min.css">
+    <!-- Your custom styles (optional) -->
+    <link href="%PUBLIC_URL%/css/style.css" rel="stylesheet">
+
+    <!-- JQuery -->
     <script src="%PUBLIC_URL%/lib/jquery-3.2.1.js"></script>
+    <!-- Tether -->
     <script src="%PUBLIC_URL%/lib/tether.js"></script>
+    <!-- Bootstrap JavaScript -->
     <script src="%PUBLIC_URL%/lib/bootstrap.js"></script>
 
+
     
 
-    <title>Simple Manager App</title>
 
-  </head>
-  <body>
+    <title>Project Cart</title>
+
+</head>
+
+<body class="hidden-sn animated deep-purple-skin">
     <noscript>
-      You need to enable JavaScript to run this app.
+        You need to enable JavaScript to run this app.
     </noscript>
-    
+
     <div id="root"></div>
-  
-    
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -43,5 +52,16 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+    <!-- Bootstrap dropdown -->
+    <script type="text/javascript" src="%PUBLIC_URL%/js/popper.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="%PUBLIC_URL%/js/mdb.min.js"></script>
+    <!-- Customizer -->
+    <script type="text/javascript" src="https://mdbootstrap.com/live/_MDB/js/customizer.min.js"></script>
+    <!-- Custom -->
+    <script type="text/javascript">
+        $(".button-collapse").sideNav();
+    </script>
+</body>
+
 </html>
